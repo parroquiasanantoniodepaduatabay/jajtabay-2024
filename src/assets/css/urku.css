@@ -1355,7 +1355,7 @@ body {
     /* background-image: url("../img/project-1h.jpg"); */
   }
 }
-@media (min-width: 40em) {.item-inside-1 {background-size: 100%;}}
+/* @media (min-width: 40em) {.item-inside-1 {background-size: 100%;}} */
 
 .post-inside-1 { 
   background-image: url("../img/post-1.jpg"); */ }
