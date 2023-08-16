@@ -1361,9 +1361,7 @@ body {
   }
 }
 
-.post-inside-1 {
-  /* background-image: url("../img/post-1.jpg"); */
-}
+<!--.post-inside-1 { /* background-image: url("../img/post-1.jpg"); */ } -->
 
 #layout-grid:checked ~ .rk-portfolio,
 #layout-grid:checked ~ .rk-blog {
