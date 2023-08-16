@@ -21,7 +21,6 @@ export class FooterComponent {
   private cargarInfo(){
     this.http.get('assets/data/data-pagina.json')
         .subscribe( (resp: infoPagina) => {
-          // this.cargada = true;
           this.info = resp;
         });
       }

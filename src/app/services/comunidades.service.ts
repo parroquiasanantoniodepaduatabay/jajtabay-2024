@@ -20,7 +20,6 @@ export class ComunidadesService {
     return new Promise<void>( ( resolve, reject ) => {
       this.http.get('https://jajtabay2024-f55b8-default-rtdb.firebaseio.com/comunidades_id.json')
           .subscribe( ( resp: any ) => {
-            // console.log(resp);
             this.comunidades=resp;
             setTimeout(() => {
               this.cargando = false;
@@ -35,7 +34,6 @@ export class ComunidadesService {
   }
 
   buscarComunidades( termino: string ) {
-
     if ( this.comunidades.length === 0 ) {
       // cargar Comunidades
       this.cargarComunidades().then( () => {
@@ -43,33 +41,21 @@ export class ComunidadesService {
         // Aplicar filtro
         this.filtrarComunidades( termino );
       });
-
     } else {
       // aplicar el filtro
       this.filtrarComunidades( termino );
     }
-
-
   }
 
   private filtrarComunidades( termino: string ) {
-
-    // console.log(this.comunidades);
     this.comunidadesFiltrado = [];
-
     termino = termino.toLocaleLowerCase();
-
     this.comunidades.forEach( comun => {
-
       const comunidadLower = comun.comunidad.toLocaleLowerCase();
       const santolower = comun.santo.toLocaleLowerCase();
-
       if ( santolower.indexOf( termino ) >= 0 || comunidadLower.indexOf( termino ) >= 0  ) {
         this.comunidadesFiltrado.push( comun );
       }
-
     });
-
-
   }
 }

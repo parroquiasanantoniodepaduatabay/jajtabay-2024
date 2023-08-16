@@ -24,7 +24,6 @@ export class ComunidadesComponent implements OnInit {
               .subscribe( (comun: comunidadesDescripcion) => {
                 this.id = parametros['id'];
                 this.comun = comun;
-                console.log(comun.santo);
               });
         });
   }

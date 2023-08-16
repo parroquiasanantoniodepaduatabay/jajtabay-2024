@@ -29,7 +29,6 @@ export class InfoPaginaService {
     this.http.get('https://jajtabay2024-f55b8-default-rtdb.firebaseio.com/equipo.json')
       .subscribe( (resp: any) => {
         this.equipo = resp;
-        // console.log(resp);
       });
   }
 }
