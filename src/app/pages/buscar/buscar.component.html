@@ -1,0 +1,10 @@
+<div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
+    <a *ngFor="let comunidad of comunidadesService.comunidadesFiltrado"
+        [routerLink]="['/comunidades', comunidad.cod]" class="rk-item ae-masonry__item">
+        <img src="assets/comunidades/{{ comunidad.url }}.jpg" alt="">
+        <div class="item-meta">
+            <h2>{{ comunidad.santo }}</h2>
+            <p>{{ comunidad.comunidad }}</p>
+        </div>
+    </a>
+</div>

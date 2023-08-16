@@ -1,0 +1,139 @@
+<section *ngIf="comun" class="ae-container-fluid ae-container-fluid--full">
+    <!-- <div align="center" *ngIf="comunidadesService.cargando"> 
+        <br><br><br><br>
+        <h2 >Cargando</h2>
+
+        <div class="loader loader--style1" title="0">
+            <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="40px" height="40px" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
+                <path opacity="0.2" fill="#000" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+                s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+                c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z"/>
+                <path fill="#000" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+                C22.32,8.481,24.301,9.057,26.013,10.047z">
+                <animateTransform attributeType="xml"
+                attributeName="transform"
+                type="rotate"
+                from="0 20 20"
+                to="360 20 20"
+                dur="0.5s"
+                repeatCount="indefinite"/>
+                </path>
+            </svg>
+        </div>
+
+        <p>Paz y Bien</p>
+
+    </div> -->
+    <header [ngStyle]="{ 'background-image': 'url(assets/comunidades/'+ id +'/main.jpg)' }"
+            class="rk-portfolio-cover item-inside-1">
+            <div class="item-inside__meta">
+                <h1 class="ae-u-bolder rk-portfolio-title ">{{ comun.santo }}</h1>
+                <p class="ae-theta rk-portfolio-category ">{{ comun.sector }}</p>
+            </div>
+        </header>
+    <div class="ae-container-fluid">
+        <div class="ae-grid ae-grid--collapse rk-portfolio-info ">
+            <div class="ae-grid__item item-lg-8 item-sm--center au-xs-ta-center au-lg-ta-left">
+                <h2 class="rk-portfolio-inner-title ">{{ comun.comunidad }}</h2>
+            </div>
+            <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right rk-portfolio-details">
+                <p class="rk-portfolio-inner-client ">
+                    <img class="au-xs-ta-center rk-portfolio-inner-client " 
+                    [src]=" comun.qrgeoloc " 
+                    alt="Urku Portfolio">
+                    <a target="_blank"
+                        [href]="comun.geoloc"
+                        class="ae-kappa">
+                        <span class="ae-u-bolder au-underline rk-portfolio-inner-website">Geolocalización</span>
+                    </a><br>
+                    <span class="ae-lambda">Responsable: </span>
+                    <span class="ae-u-bolder">{{ comun.responsable }}</span>
+                </p>
+                <p class="au-underline rk-portfolio-inner-website ">
+                    <a target="_blank"
+                        [href]="comun.whatsapp"
+                        class="ae-kappa"
+                        style="color: #4cc85b; font-weight: bold;">
+                        Haz clic para WhatsApp
+                    </a>
+                </p>
+                <p class="ae-kappa ae-u-bold rk-portfolio-inner-date "><a href="tel:{{comun.telefono}}">Haz clic para llamar</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="ae-container-fluid ae-container-fluid--inner rk-portfolio--inner">
+        <div class="ae-grid ae-grid--collapse au-xs-ptp-1">
+            <div class="ae-grid__item item-lg-5 au-lg-ptp-1">
+                <h4 class="ae-u-bolder">{{ comun.subtitulo2 }}</h4>
+                <p class="ae-eta">{{ comun.parrafo1 }}</p>
+                <p class="ae-eta">{{ comun.parrafo2 }}</p>
+            </div>
+            <div class="ae-grid__item item-lg-6 item-lg--offset-1">
+                <img [src]=" comun.imagen2 " alt="Imagen para mostrar">
+            </div>
+        </div>
+        <div class="ae-grid ae-grid--collapse">
+            <div class="ae-grid__item item-lg-8">
+                <img [src]=" comun.imagen2 " alt="Urku Portfolio">
+            </div>
+            <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
+                <p>{{ comun.parrafo3 }}</p>
+                <p class="au-mb-3">{{ comun.parrafo5 }}</p>
+                <p class="ae-u-bolder">{{ comun.subtitulo2 }}</p>
+            </div>
+        </div>
+        <div class="ae-grid ae-grid--collapse au-xs-ptp-1 au-xs-pbp-1">
+            <div class="ae-grid__item item-lg-8 item-lg--offset-2">
+                <h4 class="ae-u-bolder">{{ comun.subtitulo2 }}</h4>
+                <p class="ae-eta">{{ comun.parrafo6 }}</p>
+                <p class="ae-eta">{{ comun.parrafo6 }}</p>
+            </div>
+        </div>
+        <div class="ae-grid ae-grid--collapse">
+            <div class="ae-grid__item item-lg--auto">
+                <img [src]=" comun.imagen3 " alt="Urku Portfolio">
+            </div>
+        </div>
+        <div class="ae-grid ae-grid--collapse">
+            <div class="ae-grid__item item-lg-6">
+                <img [src]=" comun.imagen2 " alt="Urku Portfolio">
+            </div>
+            <div class="ae-grid__item item-lg-5 item-lg--offset-1 au-lg-ptp-1">
+                <h4 class="ae-u-bolder">{{ comun.subtitulo3 }}</h4>
+                <p class="ae-eta">{{ comun.parrafo6 }}</p>
+                <p class="ae-eta">{{ comun.parrafo6 }}</p>
+            </div>
+        </div>
+        <div class="ae-grid--alt test">
+            <div class="ae-grid__item--alt item-sm--auto item-sm--offset-1 item-lg--offset-0 item-sm--end item-sm--bottom">
+                <div class="ae-grid ae-grid--alt8 au-xs-ta-center au-sm-ta-left">
+                    <div class="ae-grid__item--alt8 item-lg-6">
+                        <span class="ae-u-boldest">1.</span>
+                        <p class="au-mt-1">{{ comun.parrafo7 }}</p>
+                        <span class="ae-u-boldest">2.</span>
+                        <p class="au-mt-1">{{ comun.parrafo8 }}</p>
+                    </div>
+                    <div class="ae-grid__item--alt8 item-lg-6">
+                        <span class="ae-u-boldest">3.</span>
+                        <p class="au-mt-1">{{ comun.parrafo9 }}</p>
+                        <span class="ae-u-boldest">4.</span>
+                        <p class="au-mt-1">{{ comun.parrafo10 }}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ae-grid__item--alt item-sm--auto item-lg-3 item-lg--offset-1 item-lg--end">
+                <img [src]=" comun.imagen2 " alt="Urku Portfolio">
+            </div>
+        </div>
+    </div>
+    <!-- <div class="ae-container-fluid au-pt-4 au-pb-4">
+        <div class="group-buttons">
+            <a href="#0" class="au-mt-2 arrow-button arrow-button--right">Next Project
+                <span class="arrow-cont">
+                    <svg><use xlink:href="assets/img/symbols.svg#arrow"></use></svg>
+                </span>
+            </a>
+        </div>
+    </div> -->
+</section>

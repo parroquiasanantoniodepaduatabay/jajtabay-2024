@@ -2,37 +2,42 @@
     <div class="ae-grid ae-grid--collapse">
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-left">
             <ul class="rk-menu rk-footer-menu">
-                <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">Inicio</a></li>
-                <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Nosotros</a></li>
+                <li routerLinkActive="active" class="rk-menu__item">
+                    <a routerLink="casa" class="rk-menu__link">Inicio</a></li>
+                <li routerLinkActive="active" class="rk-menu__item">
+                    <a routerLink="nosotros" class="rk-menu__link">Nosotros</a></li>
             </ul>
             <p class="rk-footer__text rk-footer__copy "> 
                 <span class="ae-u-bold">© </span>
-                <span class="ae-u-bolder">2015 URKU PORTFOLIO </span>
+                <span class="ae-u-bolder">2024 {{ infoPaginaService.info.titulo_app }}</span>
             </p>
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center">
-            <a href="#0" class="rk-social-btn ">
+            <a target="_blank" [href]=" infoPaginaService.info.facebook " class="rk-social-btn ">
                 <svg><use xlink:href="assets/img/symbols.svg#icon-facebook"></use></svg>
             </a>
-            <a href="#0" class="rk-social-btn ">
+            <a target="_blank" [href]=" infoPaginaService.info.twitter " class="rk-social-btn ">
                 <svg><use xlink:href="assets/img/symbols.svg#icon-twitter"></use></svg>
             </a>
-            <a href="#0" class="rk-social-btn ">
+            <a target="_blank" [href]=" infoPaginaService.info.instagram " class="rk-social-btn ">
                 <svg><use xlink:href="assets/img/symbols.svg#icon-pinterest"></use></svg>
             </a>
-            <a href="#0" class="rk-social-btn ">
+            <!-- <a href="#0" class="rk-social-btn ">
                 <svg><use xlink:href="assets/img/symbols.svg#icon-tumblr"></use></svg>
-            </a>
+            </a> -->
         </div>
         <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
             <p class="rk-footer__text rk-footer__contact "> 
                 <span class="ae-u-bold">Email: </span>
                 <span class="ae-u-bolder"> 
-                    <a href="#0" class="rk-dark-color ">contact@urkuportfolio.com </a>
+                    <a target="_blank" 
+                        href="mailTo:{{ infoPaginaService.info.correo }}" 
+                        class="rk-dark-color ">{{ infoPaginaService.info.correo }} 
+                    </a>
                 </span>
             </p>
-            <p class="rk-footer__text rk-footer__by">Theme by 
-                <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a>
+            <p class="rk-footer__text rk-footer__by">Innovated by: 
+                <a routerLink="nosotros" class="ae-u-bolder">Lic. Luis Alfonso Pérez Serrano</a>
             </p>
         </div>
     </div>

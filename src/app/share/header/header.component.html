@@ -1,4 +1,4 @@
-<header class="ae-container-fluid ae-container-fluid--full rk-header ">
+<header *ngIf="info" class="ae-container-fluid ae-container-fluid--full rk-header ">
     <input type="checkbox" id="mobile-menu" class="rk-mobile-menu">
     <label for="mobile-menu">
         <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
@@ -6,18 +6,29 @@
         <svg><use xlink:href="assets/img/symbols.svg#bar"></use></svg>
     </label>
     <div class="ae-container-fluid rk-topbar">
-        <h1 class="rk-logo"><a href="index.html">jornada arquiocesana juvenil<br><sup>tabay 2024</sup></a></h1>
+        <h1 class="rk-logo">
+            <a routerLink="casa">{{ infoPaginaService.info.titulo_app }}<br><sup>tabay 2024 </sup>
+            </a>
+        </h1>
         <nav class="rk-navigation">
             <ul class="rk-menu">
-                <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">Casa</a></li>
-                <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">Nosotros</a></li>
+                <li routerLinkActive="active" class="rk-menu__item"><a routerLink="casa" class="rk-menu__link">Casa</a></li>
+                <li routerLinkActive="active" class="rk-menu__item"><a routerLink="nosotros" class="rk-menu__link">Nosotros</a></li>
             </ul>
-            <form class="rk-search">
-                <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+            <div class="rk-search">
+                <input type="text" 
+                (keyup.enter)="buscarComunidad( txtBuscar.value )"
+                placeholder="Buscar..." 
+                id="urku-search" 
+                class="rk-search-field"
+                #txtBuscar>
+
                 <label for="urku-search">
-                    <svg><use xlink:href="assets/img/symbols.svg#icon-search"></use></svg>
+                    <svg>
+                        <use xlink:href="assets/img/symbols.svg#icon-search"></use>
+                    </svg>
                 </label>
-            </form>
+            </div>
         </nav>
     </div>
 </header>

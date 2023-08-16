@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { InfoPaginaService } from './services/info-pagina.service';
+import { ComunidadesService } from './services/comunidades.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'jajtabay2024';
+  
+  constructor( public infoPagina: InfoPaginaService,
+                public infoComunidades: ComunidadesService ){
+
+  }
 }
