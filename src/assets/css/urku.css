@@ -1355,13 +1355,10 @@ body {
     /* background-image: url("../img/project-1h.jpg"); */
   }
 }
-@media (min-width: 40em) {
-  .item-inside-1 {
-   /* background-size: 95%; Eliminar el tamaño de la imagen principal de los comun-*/
-  }
-}
+@media (min-width: 40em) {.item-inside-1 {background-size: 100%;}}
 
-<!--.post-inside-1 { /* background-image: url("../img/post-1.jpg"); */ } -->
+.post-inside-1 { 
+  background-image: url("../img/post-1.jpg"); */ }
 
 #layout-grid:checked ~ .rk-portfolio,
 #layout-grid:checked ~ .rk-blog {
