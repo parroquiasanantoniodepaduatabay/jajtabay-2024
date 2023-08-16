@@ -1320,7 +1320,7 @@ body {
 
 .item-inside__meta {
   position: relative;
-  top: 90px; left: 0px;
+  top: 55px; left: 0px;
   text-align: center;
 }
 .item-inside__meta--contrast:before {
@@ -1353,7 +1353,7 @@ body {
 
 .item-inside-1 {
   /* background-image: url("../img/project-1.jpg"); */
-  background-position: 50% 50%;
+  background-position: 50% 100%;
   /* background-size: 100%; */
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
@@ -1363,7 +1363,7 @@ body {
 }
 @media (min-width: 40em) {
   .item-inside-1 {
-    background-size: 105%;
+    background-size: 150%;
   }
 }
 
