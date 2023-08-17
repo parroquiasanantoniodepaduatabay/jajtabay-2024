@@ -6,11 +6,11 @@ import { ComunidadesComponent } from './pages/comunidades/comunidades.component'
 import { BuscarComponent } from './pages/buscar/buscar.component';
 
 const routes: Routes = [
-  { path: 'casa', component: Jajmerida2024Component },
-  { path: 'nosotros', component: NosotrosComponent},
+  { path: 'iglesia', component: Jajmerida2024Component },
+  { path: 'servidores', component: NosotrosComponent},
   { path: 'comunidades/:id', component: ComunidadesComponent }, // /:id
   { path: 'buscar/:termino', component: BuscarComponent },
-  { path: '**', pathMatch: 'full', redirectTo:'casa' }
+  { path: '**', pathMatch: 'full', redirectTo:'iglesia' }
 ];
 
 @NgModule({
