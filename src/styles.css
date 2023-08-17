@@ -3,3 +3,8 @@ svg path,
 svg rect{
   fill: black;
 }
+
+img.redimension {
+  max-width:50%;
+  max-height:50%;
+}
