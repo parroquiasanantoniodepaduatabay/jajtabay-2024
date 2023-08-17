@@ -1,1 +1,8 @@
-svg path,svg rect{fill:#000}
+svg path,svg rect {
+  fill:#000
+}
+
+img.redimension {
+  max-width:50%;
+  max-height:50%;
+}
